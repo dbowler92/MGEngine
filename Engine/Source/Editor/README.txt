@@ -1,0 +1,1 @@
+Should look in to writing a simple editor which uses the engine (runtime) code as a base.

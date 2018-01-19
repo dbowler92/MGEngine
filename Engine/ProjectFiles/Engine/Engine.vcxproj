@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Development|x64">
+      <Configuration>Development</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{77BDD9C7-6436-4E92-9387-A8C3E6002B3A}</ProjectGuid>
+    <RootNamespace>Engine</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Development|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Development|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Config\D3D12Config.h" />
+    <ClInclude Include="..\..\Config\EngineConfig.h" />
+    <ClInclude Include="..\..\Config\VulkanConfig.h" />
+    <ClInclude Include="..\..\Config\Win32Config.h" />
+    <ClInclude Include="..\..\Source\Runtime\Core\ApplicationDelegate\IApplicationDelegate.h" />
+    <ClInclude Include="..\..\Source\Runtime\Core\CoreDefines.h" />
+    <ClInclude Include="..\..\Source\Runtime\Core\CoreInclude.h" />
+    <ClInclude Include="..\..\Source\Runtime\Core\CorePlatform.h" />
+    <ClInclude Include="..\..\Source\Runtime\Core\CoreTypes.h" />
+    <ClInclude Include="..\..\Source\Runtime\Core\Engine\Engine.h" />
+    <ClInclude Include="..\..\Source\Runtime\Debug\Log\DebugLog.h" />
+    <ClInclude Include="..\..\Source\Runtime\HAL\Application\Application.h" />
+    <ClInclude Include="..\..\Source\Runtime\HAL\Application\IApplication.h" />
+    <ClInclude Include="..\..\Source\Runtime\HAL\Application\Win32\Win32Application.h" />
+    <ClInclude Include="..\..\Source\Runtime\HAL\PlatformTimer\PlatformTimer.h" />
+    <ClInclude Include="..\..\Source\Runtime\HAL\Window\IWindow.h" />
+    <ClInclude Include="..\..\Source\Runtime\HAL\Window\Win32\Win32Window.h" />
+    <ClInclude Include="..\..\Source\Runtime\HAL\Window\Window.h" />
+    <ClInclude Include="..\..\Source\Runtime\Includes\DebugIncludes.h" />
+    <ClInclude Include="..\..\Source\Runtime\Includes\GraphicsIncludes.h" />
+    <ClInclude Include="..\..\Source\Runtime\Includes\MathIncludes.h" />
+    <ClInclude Include="..\..\Source\Runtime\Includes\RenderingIncludes.h" />
+    <ClInclude Include="..\..\Source\Runtime\Math\Matrix\Matrix3x3.h" />
+    <ClInclude Include="..\..\Source\Runtime\Math\Vector\Vector3D.h" />
+    <ClInclude Include="..\..\Source\Runtime\Rendering\VirtualCamera\VirtualCamera.h" />
+    <ClInclude Include="..\..\Source\ThirdParty\GeometryGenerator\GeometryGenerator.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\Runtime\Core\Engine\Engine.cpp" />
+    <ClCompile Include="..\..\Source\Runtime\Debug\Log\DebugLog.cpp" />
+    <ClCompile Include="..\..\Source\Runtime\HAL\Application\Win32\Win32Application.cpp" />
+    <ClCompile Include="..\..\Source\Runtime\HAL\PlatformTimer\PlatformTimer.cpp" />
+    <ClCompile Include="..\..\Source\Runtime\HAL\Window\Win32\Win32Window.cpp" />
+    <ClCompile Include="..\..\Source\Runtime\Rendering\VirtualCamera\VirtualCamera.cpp" />
+    <ClCompile Include="..\..\Source\ThirdParty\GeometryGenerator\GeometryGenerator.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

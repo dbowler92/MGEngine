@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source">
+      <UniqueIdentifier>{79d5cece-5b54-46f8-8215-cdb44538805e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Config">
+      <UniqueIdentifier>{b6fbb5bc-19d5-48b6-a4dc-bf5c5339fddd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{2d58f059-d726-404c-9000-a808b51cf728}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Shaders">
+      <UniqueIdentifier>{105e9508-6c89-415c-9402-623f46b022ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\ThirdParty">
+      <UniqueIdentifier>{5598ec42-40dc-4c0b-80cd-fc8db399c3dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Runtime">
+      <UniqueIdentifier>{d5b423fd-2ff5-4c70-908b-6a3d27b31764}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Runtime\Rendering">
+      <UniqueIdentifier>{f5642d07-fdda-442f-ad4b-09724470f0dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Runtime\Rendering\VirtualCamera">
+      <UniqueIdentifier>{48543690-4917-49f6-bb63-4fc45fa86797}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Runtime\Math">
+      <UniqueIdentifier>{968aca17-dba1-4d1a-8c1e-a125f301729a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Runtime\Math\Matrix">
+      <UniqueIdentifier>{7511748b-99a6-4706-a486-1c2fc18a68c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Runtime\Math\Vector">
+      <UniqueIdentifier>{8c49e8c8-e396-478a-944f-6c87a7348b3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Runtime\Includes">
+      <UniqueIdentifier>{e0baa5c6-4e2d-4fc7-a5dc-bbabadae13d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Runtime\HAL">
+      <UniqueIdentifier>{88dbd25f-7fe7-45bf-9c47-2bad73280a95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Runtime\HAL\Application">
+      <UniqueIdentifier>{6fd182f8-5edf-4166-a76f-c79ef955f673}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Runtime\HAL\Application\Win32">
+      <UniqueIdentifier>{9e3f7d3e-251f-49f4-89d5-782763d18266}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Runtime\HAL\Window">
+      <UniqueIdentifier>{bdb88a9b-4dbf-41c7-abdd-08654458db06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Runtime\HAL\Window\Win32">
+      <UniqueIdentifier>{ce9f51d2-5fce-42ba-98da-f77bc9cd1dfc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Runtime\HAL\PlatformTimer">
+      <UniqueIdentifier>{542ad166-65ce-4866-a799-2c5f8493207f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Runtime\Debug">
+      <UniqueIdentifier>{a2cadb23-ea83-435b-9d1e-7ac5d05588ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Runtime\Debug\Log">
+      <UniqueIdentifier>{9b6c4d29-3085-4c3d-ab14-63a35a6f74b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Runtime\Core">
+      <UniqueIdentifier>{a41b78d5-2b01-4607-9a2c-d014dfa05139}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Runtime\Core\ApplicationDelegate">
+      <UniqueIdentifier>{40899ad9-2d2c-43ac-95ba-24153f8efcf6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Runtime\Core\Engine">
+      <UniqueIdentifier>{706f276f-fe1c-439f-8585-55434e0d922e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\ThirdParty\GeometryGenerator">
+      <UniqueIdentifier>{fdc26fbc-0ec5-4175-8cab-38562a623671}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\Runtime\Includes\DebugIncludes.h">
+      <Filter>Source\Runtime\Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Runtime\Includes\GraphicsIncludes.h">
+      <Filter>Source\Runtime\Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Runtime\Includes\MathIncludes.h">
+      <Filter>Source\Runtime\Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Runtime\Includes\RenderingIncludes.h">
+      <Filter>Source\Runtime\Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Runtime\Rendering\VirtualCamera\VirtualCamera.h">
+      <Filter>Source\Runtime\Rendering\VirtualCamera</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Runtime\Math\Vector\Vector3D.h">
+      <Filter>Source\Runtime\Math\Vector</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Runtime\Math\Matrix\Matrix3x3.h">
+      <Filter>Source\Runtime\Math\Matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Runtime\HAL\Application\Application.h">
+      <Filter>Source\Runtime\HAL\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Runtime\HAL\Application\IApplication.h">
+      <Filter>Source\Runtime\HAL\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Runtime\HAL\Application\Win32\Win32Application.h">
+      <Filter>Source\Runtime\HAL\Application\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Runtime\HAL\PlatformTimer\PlatformTimer.h">
+      <Filter>Source\Runtime\HAL\PlatformTimer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Runtime\HAL\Window\IWindow.h">
+      <Filter>Source\Runtime\HAL\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Runtime\HAL\Window\Window.h">
+      <Filter>Source\Runtime\HAL\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Runtime\HAL\Window\Win32\Win32Window.h">
+      <Filter>Source\Runtime\HAL\Window\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Runtime\Debug\Log\DebugLog.h">
+      <Filter>Source\Runtime\Debug\Log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Runtime\Core\CoreDefines.h">
+      <Filter>Source\Runtime\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Runtime\Core\CoreInclude.h">
+      <Filter>Source\Runtime\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Runtime\Core\CorePlatform.h">
+      <Filter>Source\Runtime\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Runtime\Core\CoreTypes.h">
+      <Filter>Source\Runtime\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Runtime\Core\Engine\Engine.h">
+      <Filter>Source\Runtime\Core\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Runtime\Core\ApplicationDelegate\IApplicationDelegate.h">
+      <Filter>Source\Runtime\Core\ApplicationDelegate</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Config\D3D12Config.h">
+      <Filter>Config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Config\EngineConfig.h">
+      <Filter>Config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Config\VulkanConfig.h">
+      <Filter>Config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Config\Win32Config.h">
+      <Filter>Config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ThirdParty\GeometryGenerator\GeometryGenerator.h">
+      <Filter>Source\ThirdParty\GeometryGenerator</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\Runtime\Rendering\VirtualCamera\VirtualCamera.cpp">
+      <Filter>Source\Runtime\Rendering\VirtualCamera</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Runtime\HAL\Application\Win32\Win32Application.cpp">
+      <Filter>Source\Runtime\HAL\Application\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Runtime\HAL\PlatformTimer\PlatformTimer.cpp">
+      <Filter>Source\Runtime\HAL\PlatformTimer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Runtime\HAL\Window\Win32\Win32Window.cpp">
+      <Filter>Source\Runtime\HAL\Window\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Runtime\Debug\Log\DebugLog.cpp">
+      <Filter>Source\Runtime\Debug\Log</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Runtime\Core\Engine\Engine.cpp">
+      <Filter>Source\Runtime\Core\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ThirdParty\GeometryGenerator\GeometryGenerator.cpp">
+      <Filter>Source\ThirdParty\GeometryGenerator</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

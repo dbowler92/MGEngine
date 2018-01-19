@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source">
+      <UniqueIdentifier>{1b7f64d9-2a96-4d8b-9d29-18bc74173520}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{d38d401c-e24d-468f-9b8c-cd0833f16076}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Config">
+      <UniqueIdentifier>{85b081e6-a91b-4c0c-b637-a22c826387bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Shaders">
+      <UniqueIdentifier>{cb3354d6-160e-441d-bb8a-59090868b259}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Sandbox">
+      <UniqueIdentifier>{d1647627-6c2f-4f3f-b79f-c1858855f72c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\ThirdParty">
+      <UniqueIdentifier>{38a62d59-09f4-433a-9600-ae40b47139d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Sandbox\Main">
+      <UniqueIdentifier>{24dbd23a-ca7a-4337-93b0-c5ca7f056c7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Sandbox\ApplicationDelegate">
+      <UniqueIdentifier>{8e727275-0a81-4a24-87da-9cd4d3be485a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Config\AppConfig.h">
+      <Filter>Config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Sandbox\ApplicationDelegate\SandboxAppDelegate.h">
+      <Filter>Source\Sandbox\ApplicationDelegate</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\Sandbox\Main\SandboxMain.cpp">
+      <Filter>Source\Sandbox\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Sandbox\ApplicationDelegate\SandboxAppDelegate.cpp">
+      <Filter>Source\Sandbox\ApplicationDelegate</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
