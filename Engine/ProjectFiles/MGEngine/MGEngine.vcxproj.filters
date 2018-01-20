@@ -55,12 +55,6 @@
     <Filter Include="Source\Runtime\HAL\PlatformTimer">
       <UniqueIdentifier>{542ad166-65ce-4866-a799-2c5f8493207f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source\Runtime\Debug">
-      <UniqueIdentifier>{a2cadb23-ea83-435b-9d1e-7ac5d05588ed}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Runtime\Debug\Log">
-      <UniqueIdentifier>{9b6c4d29-3085-4c3d-ab14-63a35a6f74b3}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source\Runtime\Core">
       <UniqueIdentifier>{a41b78d5-2b01-4607-9a2c-d014dfa05139}</UniqueIdentifier>
     </Filter>
@@ -72,6 +66,12 @@
     </Filter>
     <Filter Include="Source\ThirdParty\GeometryGenerator">
       <UniqueIdentifier>{fdc26fbc-0ec5-4175-8cab-38562a623671}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Runtime\Debugging">
+      <UniqueIdentifier>{a2cadb23-ea83-435b-9d1e-7ac5d05588ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Runtime\Debugging\Log">
+      <UniqueIdentifier>{9b6c4d29-3085-4c3d-ab14-63a35a6f74b3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -117,9 +117,6 @@
     <ClInclude Include="..\..\Source\Runtime\HAL\Window\Win32\Win32Window.h">
       <Filter>Source\Runtime\HAL\Window\Win32</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\Runtime\Debug\Log\DebugLog.h">
-      <Filter>Source\Runtime\Debug\Log</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\Source\Runtime\Core\CoreDefines.h">
       <Filter>Source\Runtime\Core</Filter>
     </ClInclude>
@@ -153,6 +150,9 @@
     <ClInclude Include="..\..\Source\ThirdParty\GeometryGenerator\GeometryGenerator.h">
       <Filter>Source\ThirdParty\GeometryGenerator</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\Runtime\Debugging\Log\DebugLog.h">
+      <Filter>Source\Runtime\Debugging\Log</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\Runtime\Rendering\VirtualCamera\VirtualCamera.cpp">
@@ -167,14 +167,14 @@
     <ClCompile Include="..\..\Source\Runtime\HAL\Window\Win32\Win32Window.cpp">
       <Filter>Source\Runtime\HAL\Window\Win32</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\Runtime\Debug\Log\DebugLog.cpp">
-      <Filter>Source\Runtime\Debug\Log</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Source\Runtime\Core\Engine\Engine.cpp">
       <Filter>Source\Runtime\Core\Engine</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\ThirdParty\GeometryGenerator\GeometryGenerator.cpp">
       <Filter>Source\ThirdParty\GeometryGenerator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Runtime\Debugging\Log\DebugLog.cpp">
+      <Filter>Source\Runtime\Debugging\Log</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
