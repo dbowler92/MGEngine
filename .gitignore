@@ -24,6 +24,12 @@ bld/
 [Oo]bj/
 #[Ll]og/
 
+#Ignore anything in Intermediate folder - this is out temps folder
+[Ii]ntermediate/
+
+#Ignore anything in Binaries - this is our output folder -> Can build these as required
+[Bb]inaries/
+
 #We do want things in a [Dd]ebugging folder. Eg: Shaders, debug logs etc
 ![Dd]ebugging/**
 

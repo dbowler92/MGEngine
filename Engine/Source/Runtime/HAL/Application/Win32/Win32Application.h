@@ -12,7 +12,7 @@
 #include <HAL/Application/IApplication.h>
 #include <HAL/Window/Window.h>
 #include <HAL/PlatformTimer/PlatformTimer.h>
-#include <Debug/Log/DebugLog.h>
+#include <Debugging/Log/DebugLog.h>
 
 class FWin32Application : public IApplication
 {
