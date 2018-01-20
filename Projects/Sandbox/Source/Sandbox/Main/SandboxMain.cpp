@@ -6,11 +6,11 @@
 
 #pragma once
 
-#include <Engine/Core/CoreInclude.h>
-#include <Engine/Core/Engine/Engine.h>
+#include <Core/CoreInclude.h>
+#include <Core/Engine/Engine.h>
 
-#include <Sandbox/AppConfig/AppConfig.h>
-#include <Sandbox/ApplicationDelegate/SandboxAppDelegate.h> //Our app delegate
+#include <Config/AppConfig.h>
+#include <ApplicationDelegate/SandboxAppDelegate.h> //Our app delegate
 
 #ifdef PLATFORM_WIN32
 #include <Windows.h>

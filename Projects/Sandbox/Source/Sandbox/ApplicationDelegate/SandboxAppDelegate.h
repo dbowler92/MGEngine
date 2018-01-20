@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include <Engine/Core/ApplicationDelegate/IApplicationDelegate.h>
+#include <Runtime/Core/ApplicationDelegate/IApplicationDelegate.h>
 
 class FSandboxAppDelegate : public IApplicationDelegate
 {
