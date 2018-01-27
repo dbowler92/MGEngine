@@ -12,31 +12,14 @@
 #include <Config/AppConfig.h>
 #include <ApplicationDelegate/SandboxAppDelegate.h> //Our app delegate
 
-#ifdef PLATFORM_WIN32
+#ifdef PLATFORM_WINDOWS
 #include <Windows.h>
 #include <crtdbg.h>
-
-void ShowConsoleW32()
-{
-	AllocConsole();
-
-	HANDLE handle_out = GetStdHandle(STD_OUTPUT_HANDLE);
-	int hCrt = _open_osfhandle((long)handle_out, _O_TEXT);
-	FILE* hf_out = _fdopen(hCrt, "w");
-	setvbuf(hf_out, NULL, _IONBF, 1);
-
-	*stdout = *hf_out;
-	HANDLE handle_in = GetStdHandle(STD_INPUT_HANDLE);
-	hCrt = _open_osfhandle((long)handle_in, _O_TEXT);
-	FILE* hf_in = _fdopen(hCrt, "r");
-	setvbuf(hf_in, NULL, _IONBF, 128);
-	*stdin = *hf_in;
-}
 
 INT WINAPI wWinMain(HINSTANCE HInstance, HINSTANCE HPrevInstance, LPWSTR LpCmdLine, int CmdShow)    
 {
 	//Set up simple checks for memory leaks in windows.  
-#if defined(DEBUG) | defined(_DEBUG)
+#ifdef CONFIGURATION_DEBUG
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 #endif
 

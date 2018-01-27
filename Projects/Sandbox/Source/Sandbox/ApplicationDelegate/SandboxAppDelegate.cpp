@@ -1,5 +1,7 @@
 #include "SandboxAppDelegate.h"
 
+#include <Debugging/Log/DebugLog.h>
+
 bool FSandboxAppDelegate::OnPreEngineInit()
 {
 	return true;

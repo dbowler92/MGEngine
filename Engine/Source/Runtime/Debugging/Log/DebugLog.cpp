@@ -1,19 +1,19 @@
 #include "DebugLog.h"
 
-#ifdef PLATFORM_WIN32
+#ifdef PLATFORM_WINDOWS
 #include <Windows.h>
 #endif
 
 void FDebugLog::PrintMessage(const char* Msg)
 {
-#ifdef PLATFORM_WIN32
+#ifdef PLATFORM_WINDOWS
 	OutputDebugStringA(Msg);
 #endif
 }
 
 void FDebugLog::PrintInfoMessage(const char* Msg)
 {
-#ifdef PLATFORM_WIN32
+#ifdef PLATFORM_WINDOWS
 	OutputDebugStringA("Debug Info: ");
 	OutputDebugStringA(Msg);
 
@@ -25,7 +25,7 @@ void FDebugLog::PrintInfoMessage(const char* Msg)
 
 void FDebugLog::PrintWarningMessage(const char* Msg)
 {
-#ifdef PLATFORM_WIN32 
+#ifdef PLATFORM_WINDOWS 
 	OutputDebugStringA("Debug Warning: ");
 	OutputDebugStringA(Msg);
 
@@ -41,7 +41,7 @@ void FDebugLog::PrintWarningMessage(const char* Msg)
 
 void FDebugLog::PrintErrorMessage(const char* Msg)
 {
-#ifdef PLATFORM_WIN32 
+#ifdef PLATFORM_WINDOWS 
 	OutputDebugStringA("Debug Error: ");
 	OutputDebugStringA(Msg);
 

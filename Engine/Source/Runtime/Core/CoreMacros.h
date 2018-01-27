@@ -12,7 +12,7 @@
 #define MEB_TO_BYTES(meb) meb * (1024 * 1024)
 
 //For debug builds, output extra info every time we dynamically allocate memory
-#ifdef CONFURATION_DEBUG
+#ifdef CONFIGURATION_DEBUG
 //#define MGE_NEW new (_NORMAL_BLOCK,__FILE__, __LINE__)
 #define MGE_NEW new
 #else
@@ -20,13 +20,13 @@
 #endif
 
 //TODO? Delete...
-#ifdef CONFURATION_DEBUG
+#ifdef CONFIGURATION_DEBUG
 #define MGE_DELETE delete
 #else
 #define MGE_DELETE delete
 #endif
 
-#ifdef CONFURATION_DEBUG
+#ifdef CONFIGURATION_DEBUG
 #define MGE_DELETE_ARRAY delete[]
 #else
 #define MGE_DELETE_ARRAY delete[]
