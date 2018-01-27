@@ -144,14 +144,26 @@
     <ClInclude Include="..\..\Config\VulkanConfig.h">
       <Filter>Config</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Config\Win32Config.h">
-      <Filter>Config</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\Source\ThirdParty\GeometryGenerator\GeometryGenerator.h">
       <Filter>Source\ThirdParty\GeometryGenerator</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Runtime\Debugging\Log\DebugLog.h">
       <Filter>Source\Runtime\Debugging\Log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Config\WindowsConfig.h">
+      <Filter>Config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Runtime\Core\CoreIdentifiers.h">
+      <Filter>Source\Runtime\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Runtime\Core\CoreMacros.h">
+      <Filter>Source\Runtime\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Runtime\Core\CoreBuildConfiguration.h">
+      <Filter>Source\Runtime\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Runtime\Core\CoreArchitecture.h">
+      <Filter>Source\Runtime\Core</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

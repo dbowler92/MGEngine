@@ -4,20 +4,31 @@
 //
 //Core header file that basically everything in the engine
 //and applications will include at the very top.
+// 
+//Note: OS (Windows, etc) and Platform (X64, etc) should
+//be set via Project->Properties
 
 #pragma once
 
 //*********************************************
-//*************Low level includes**************
+//********Global defines & ID's etc************
 //*********************************************
-#include <Config/EngineConfig.h>
+#include <Core/CoreIdentifiers.h>
 
 //*********************************************
 //***************Core includes*****************
 //*********************************************
+#include <Core/CoreBuildConfiguration.h>
+#include <Core/CoreArchitecture.h>
+#include <Core/CorePlatform.h>
 #include <Core/CoreDefines.h>
 #include <Core/CoreTypes.h>
-#include <Core/CorePlatform.h>
+#include <Core/CoreMacros.h>
+
+//*********************************************
+//**************Engine Configs*****************
+//*********************************************
+#include <Config/EngineConfig.h>
 
 //*********************************************
 //***************Common includes***************

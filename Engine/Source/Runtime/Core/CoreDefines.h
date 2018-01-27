@@ -6,38 +6,27 @@
 
 #pragma once
 
-//Global macros
+//Work out defines now that we have more info
 //
-//Converts from mebibyte to bytes
-#define MEB_TO_BYTES(meb) meb * (1024 * 1024)
+//Set via via <Platform>Config.h
+#ifdef _GRAPHICS_D3D12
+#define GRAPHICS_D3D12
+#define GRAPHICS_API_D3D12
 
-//For debug builds, output extra info every time we dynamically allocate memory
-#if defined(_DEBUG) | defined(DEBUG)
-//#define MGE_NEW new (_NORMAL_BLOCK,__FILE__, __LINE__)
-#define MGE_NEW new
-#else
-#define MGE_NEW new
+#ifdef PLATFORM_WINDOWS
+#define GRAPHICS_API_WINDOWS_D3D12
+#define GRAPHICS_WINDOWS_D3D12
 #endif
 
-//TODO? Delete...
-#if defined(_DEBUG) | defined(DEBUG)
-#define MGE_DELETE delete
-#else
-#define MGE_DELETE delete
 #endif
 
-#if defined(_DEBUG) | defined(DEBUG)
-#define MGE_DELETE_ARRAY delete[]
-#else
-#define MGE_DELETE_ARRAY delete[]
+#ifdef _GRAPHICS_VULKAN
+#define GRAPHICS_VULKAN
+#define GRAPHICS_API_VULKAN
+
+#ifdef PLATFORM_WINDOWS
+#define GRAPHICS_WINDOWS_VULKAN
+#define GRAPHICS_API_WINDOWS_VULKAN
 #endif
 
-//Macro to disable/hide copy constructor and assignment operator
-#define HIDE_COPY_ASSIGNMENT(c) private: c(const c &other); c& operator = (const c &other);
-
-//Macro to disable constructor, destructor, assignment operator && destructor (statics classes)
-#define MAKE_STATICS_CLASS_ONLY(c) private: c(); ~c(); c(const c &other); c& operator = (const c &other);
-
-//Macro which simplifies the process of generating a platform agnostic class. Eg: FApplication from FWin32Application
-#define GENERATE_PLATFORM_AGNOSTIC_CLASS(c, p) class c : public p	{	public:	c() {};	~c() {}; };																						 
-#define GENERATE_PLATFORM_AGNOSTIC_CLASS_WITH_VIRTUAL_DTOR(c, p) class c : public p	{ public: c() {}; virtual ~c() {}; };
+#endif

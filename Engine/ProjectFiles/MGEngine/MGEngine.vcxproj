@@ -79,6 +79,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_PLATFORM_WINDOWS;_ARCHITECTURE_X64;_CONFIGURATION_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Development|x64'">
@@ -90,6 +91,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <WholeProgramOptimization>true</WholeProgramOptimization>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <PreprocessorDefinitions>_PLATFORM_WINDOWS;_ARCHITECTURE_X64;_CONFIGURATION__DEVELOPMENT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Lib>
       <LinkTimeCodeGeneration>true</LinkTimeCodeGeneration>
@@ -102,6 +104,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_PLATFORM_WINDOWS;_ARCHITECTURE_X64;_CONFIGURATION_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -112,10 +115,14 @@
     <ClInclude Include="..\..\Config\D3D12Config.h" />
     <ClInclude Include="..\..\Config\EngineConfig.h" />
     <ClInclude Include="..\..\Config\VulkanConfig.h" />
-    <ClInclude Include="..\..\Config\Win32Config.h" />
+    <ClInclude Include="..\..\Config\WindowsConfig.h" />
     <ClInclude Include="..\..\Source\Runtime\Core\ApplicationDelegate\IApplicationDelegate.h" />
+    <ClInclude Include="..\..\Source\Runtime\Core\CoreArchitecture.h" />
+    <ClInclude Include="..\..\Source\Runtime\Core\CoreBuildConfiguration.h" />
     <ClInclude Include="..\..\Source\Runtime\Core\CoreDefines.h" />
+    <ClInclude Include="..\..\Source\Runtime\Core\CoreIdentifiers.h" />
     <ClInclude Include="..\..\Source\Runtime\Core\CoreInclude.h" />
+    <ClInclude Include="..\..\Source\Runtime\Core\CoreMacros.h" />
     <ClInclude Include="..\..\Source\Runtime\Core\CorePlatform.h" />
     <ClInclude Include="..\..\Source\Runtime\Core\CoreTypes.h" />
     <ClInclude Include="..\..\Source\Runtime\Core\Engine\Engine.h" />

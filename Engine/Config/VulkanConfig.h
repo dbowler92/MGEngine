@@ -5,3 +5,6 @@
 //Vulkan settings
 
 #pragma once
+
+//Define the graphics API we are using
+#define _GRAPHICS_VULKAN

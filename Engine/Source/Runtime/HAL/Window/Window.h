@@ -8,7 +8,7 @@
 
 #include <Core/CoreInclude.h>
 
-#ifdef PLATFORM_WIN32
+#ifdef PLATFORM_WINDOWS
 #include "Win32/Win32Window.h" 
 
 GENERATE_PLATFORM_AGNOSTIC_CLASS(FWindow, FWin32Window) 

@@ -6,8 +6,11 @@
 
 #pragma once
 
+//Define the graphics API we are using
+#define _GRAPHICS_D3D12
+
 //Libs
 
-#if defined(DEBUG) | defined(_DEBUG)
+#ifdef CONFIGURATION_DEBUG
 //...
 #endif

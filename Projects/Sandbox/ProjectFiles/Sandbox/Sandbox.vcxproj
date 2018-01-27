@@ -68,6 +68,7 @@
     <TargetName>$(ProjectName)Win64$(Configuration)</TargetName>
     <IncludePath>..\..\Source\Sandbox;..\..\;..\..\..\..\Engine\Source;..\..\..\..\Engine\Source\Runtime;..\..\..\..\Engine;$(IncludePath)</IncludePath>
     <LibraryPath>..\..\..\..\Engine\Binaries;$(LibraryPath)</LibraryPath>
+    <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>..\..\Binaries\</OutDir>
@@ -98,6 +99,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>MGEngineWin64$(Configuration).lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
