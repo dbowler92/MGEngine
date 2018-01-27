@@ -13,5 +13,5 @@
 #ifdef PLATFORM_WIN32
 #include "Win32/Win32Application.h"
 
-typedef FWin32Application FApplication;
+GENERATE_PLATFORM_AGNOSTIC_CLASS(FApplication, FWin32Application)
 #endif 

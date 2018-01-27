@@ -37,3 +37,7 @@
 
 //Macro to disable constructor, destructor, assignment operator && destructor (statics classes)
 #define MAKE_STATICS_CLASS_ONLY(c) private: c(); ~c(); c(const c &other); c& operator = (const c &other);
+
+//Macro which simplifies the process of generating a platform agnostic class. Eg: FApplication from FWin32Application
+#define GENERATE_PLATFORM_AGNOSTIC_CLASS(c, p) class c : public p	{	public:	c() {};	~c() {}; };																						 
+#define GENERATE_PLATFORM_AGNOSTIC_CLASS_WITH_VIRTUAL_DTOR(c, p) class c : public p	{ public: c() {}; virtual ~c() {}; };
