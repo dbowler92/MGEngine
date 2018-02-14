@@ -1,4 +1,4 @@
-//Win32Application.h
+//Win32Platform.h
 //Created 15/14/17
 //Created By Daniel Bowler
 //
@@ -8,21 +8,20 @@
 
 #include <Windows.h>
 
-#include <Core/CoreInclude.h>
-#include <HAL/Application/IApplication.h>
-#include <HAL/Window/Window.h>
+#include <HAL/Platform/IPlatform.h>
+#include <HAL/PlatformWindow/PlatformWindow.h>
 #include <HAL/PlatformTimer/PlatformTimer.h>
 #include <Debugging/Log/DebugLog.h>
 
-class FWin32Application : public IApplication
+class FWin32Platform : public IPlatform
 {
-	HIDE_COPY_ASSIGNMENT(FWin32Application)
+	HIDE_COPY_ASSIGNMENT(FWin32Platform)
 public:
 	/*
-	 * Default constructor and destructor
+	 * Constructor and destructor
 	 */
-	FWin32Application() {};
-	~FWin32Application() {};
+	FWin32Platform() {};
+	virtual ~FWin32Platform() = 0 {};
 
 	/*
 	* Win32 message pump - this is public as we need a global function
@@ -48,9 +47,9 @@ public:
 	bool OnPostEngineInit() override;
 
 	/*
-	* Platform main game loop
+	* Platform Tick - called at top of the game loop
 	*/
-	void OnPreMainGameLoopTick() override;
+	void OnPlatformTick() override;
 
 	/*
 	* Called once the engine is shutting down.
@@ -60,7 +59,7 @@ public:
 	/*
 	* Gets the Win32 os window that we create in InitPlatform().
 	*/
-	IWindow* GetWindow() override { return &OSWindow; };
+	IPlatformWindow* GetWindow() override { return &OSWindow; };
 
 private:
 	/*
@@ -80,7 +79,7 @@ private:
 	void CalculateFrameRateStats();
 
 private:
-	FWindow OSWindow;
+	FPlatformWindow OSWindow;
 
 	bool AppPaused = false;
 	bool Minimized = false;

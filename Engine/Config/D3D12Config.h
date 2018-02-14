@@ -10,7 +10,14 @@
 #define _GRAPHICS_D3D12
 
 //Libs
+#pragma comment(lib, "dxgi.lib")
 
 #ifdef CONFIGURATION_DEBUG
 //...
 #endif
+
+//
+//DXGI
+//
+//IDXGIFactory version: 0 - 4 inclusive.
+#define IDXGI_FACTORY_VERSION 4

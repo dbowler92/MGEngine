@@ -33,7 +33,11 @@
 #endif
 
 //Macro to disable/hide copy constructor and assignment operator
-#define HIDE_COPY_ASSIGNMENT(c) private: c(const c &other); c& operator = (const c &other);
+#define HIDE_COPY_ASSIGNMENT(c) private: c(const c &other) {}; c& operator = (const c &other) {};
+
+//Hides constructor + destructor
+#define HIDE_CONSTRUCTOR(c) private: c() {};
+#define HIDE_CONSTRUCTOR_DESTRUCTOR(c) private: c() {}; ~c() {};
 
 //Macro to disable constructor, destructor, assignment operator && destructor (statics classes)
 #define MAKE_STATICS_CLASS_ONLY(c) private: c(); ~c(); c(const c &other); c& operator = (const c &other);

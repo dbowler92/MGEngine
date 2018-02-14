@@ -1,4 +1,4 @@
-#include "Win32Application.h"
+#include "Win32Platform.h"
 
 #include <sstream>
 
@@ -7,7 +7,7 @@
 LRESULT CALLBACK GlobalWndProc(HWND Hwnd, UINT Msg, WPARAM WParam, LPARAM LParam)
 {
 	//Call Win32Application::WndProc
-	FApplication* Win32App = FEngine::GetPlatformApplication();
+	FPlatform* Win32App = FEngine::Get().GetPlatformAbstraction();
 	if (Win32App)
 	{
 		return Win32App->WndProc(Hwnd, Msg, WParam, LParam);
@@ -18,7 +18,7 @@ LRESULT CALLBACK GlobalWndProc(HWND Hwnd, UINT Msg, WPARAM WParam, LPARAM LParam
 	}
 }
 
-LRESULT FWin32Application::WndProc(HWND Hwnd, UINT Msg, WPARAM WParam, LPARAM LParam)
+LRESULT FWin32Platform::WndProc(HWND Hwnd, UINT Msg, WPARAM WParam, LPARAM LParam)
 {
 	//Send message to ATB. if ATB doesn't handle it, we will do so
 	switch (Msg)
@@ -140,7 +140,7 @@ LRESULT FWin32Application::WndProc(HWND Hwnd, UINT Msg, WPARAM WParam, LPARAM LP
 	return DefWindowProc(Hwnd, Msg, WParam, LParam);
 }
 
-bool FWin32Application::InitPlatform(void* AppHandle, void* CmdLine,
+bool FWin32Platform::InitPlatform(void* AppHandle, void* CmdLine,
 	const char* AppTitle, uint32_t InitialWindowWidth, uint32_t InitialWindowHeight)
 {
 	//Window
@@ -154,17 +154,17 @@ bool FWin32Application::InitPlatform(void* AppHandle, void* CmdLine,
 	return true;
 }
 
-bool FWin32Application::OnPostEngineInit()
+bool FWin32Platform::OnPostEngineInit()
 {
 	return true;
 }
 
-bool FWin32Application::OnShutdown()
+bool FWin32Platform::OnShutdown()
 {
 	return true;
 }
 
-bool FWin32Application::InitWin32App(const char* AppTitle)
+bool FWin32Platform::InitWin32App(const char* AppTitle)
 {
 	WNDCLASS WC;
 	WC.style = CS_HREDRAW | CS_VREDRAW;
@@ -226,7 +226,7 @@ bool FWin32Application::InitWin32App(const char* AppTitle)
 	return true;
 }
 
-bool FWin32Application::OnResize()
+bool FWin32Platform::OnResize()
 {
 	//Is the current window size the same as the new one? If so, skip resizing 
 	//since its not needed (this occurs if the user drags the screen around, for example)
@@ -243,7 +243,7 @@ bool FWin32Application::OnResize()
 	return true;
 }
 
-void FWin32Application::OnPreMainGameLoopTick()
+void FWin32Platform::OnPlatformTick()
 {
 	MSG Msg = { 0 };
 	MainGameLoopTimer.Reset();
@@ -256,7 +256,7 @@ void FWin32Application::OnPreMainGameLoopTick()
 	}
 }
 
-void FWin32Application::CalculateFrameRateStats()
+void FWin32Platform::CalculateFrameRateStats()
 {
 	/*
 	// Code computes the average frames per second, and also the 

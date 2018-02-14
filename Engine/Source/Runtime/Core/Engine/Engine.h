@@ -9,56 +9,96 @@
 #pragma once
 
 #include <Core/CoreInclude.h>
-#include <HAL/Application/Application.h>
+#include <HAL/Platform/Platform.h>
+
+#include <HAL/SystemInfo/SystemInfo.h>
+#include <Graphics/GraphicsSystemInfo/GraphicsSystemInfo.h>
 
 class FEngine
 {
-	MAKE_STATICS_CLASS_ONLY(FEngine);
+	HIDE_CONSTRUCTOR_DESTRUCTOR(FEngine);
+	HIDE_COPY_ASSIGNMENT(FEngine);
 
 public:
+	/*
+	 * Gets the shared singleton instance
+	 */
+	inline static FEngine& Get()
+	{
+		static FEngine Instance;
+		return Instance;
+	}
+
 	/*
 	* Begins the engine, enters the main game loop and then handles shutdown
 	* once we break from the main game loop - TODO: Remove void* here
 	*/
-	static int Start(void* AppInstance, void* CmdLine,
+	int Run(void* AppInstance, void* CmdLine,
 		const char* AppTitle, class IApplicationDelegate* AppDelegate);
+
+	/*
+	 * Shutdown the engine next tick - Can be called from game projects
+	 */
+	void ShutdownNextTick();
+
+	/*
+	* Gets the system info - eg: CPU count and graphics info (physical devices, output adapters etc)
+	*/
+	const FSystemInfo& GetSystemInfo() { return SystemInfo; };
+	const FGraphicsSystemInfo& GetGraphicsSystemInfo();
 
 	/*
 	* Gets the cached application specific app delegate
 	*/
-	static IApplicationDelegate* GetAppDelegate() { return CachedAppDelegate; };
+	IApplicationDelegate* GetCachedAppDelegate() { return CachedAppDelegate; };
 
 	/*
 	 * Gets the platform application class - Win32, IOS, etc
 	 */
-	static FApplication* GetPlatformApplication() { return &PlatformApplication; };
-
-
+	FPlatform* GetPlatformAbstraction() { return &Platform; };
+	
 private:
 	/*
 	* Internally, inits the engine - platform agnostic ordering.
 	*/
-	static bool InitEngine(void* AppInstance, void* CmdLine,
-		const char* AppTitle, class IApplicationDelegate* AppDelegate);
+	bool InitEngine(void* AppInstance, void* CmdLine,
+		const char* AppTitle, uint32_t InitialWindowWidth, uint32_t InitialWindowHeight);
 
 	/*
 	* Main game loop
 	*/
-	static bool EnterMainGameLoop();
+	bool EnterMainGameLoop();
 
 	/*
 	* Shutdown engine
 	*/
-	static bool ShutdownEngine();
+	bool ShutdownEngine();
 
 private:
 	/*
+	 * Logs the system info once we have it
+	 */
+	void LogSystemInfo();
+
+private:
+	/*
+	* System info - eg: CPU count and the like
+	*/
+	FSystemInfo SystemInfo;
+
+	/*
 	* Cache a reference to the game/app delegate
 	*/
-	static class IApplicationDelegate* CachedAppDelegate;
+	class IApplicationDelegate* CachedAppDelegate = nullptr;
 
 	/*
 	* Platform application
 	*/
-	static FApplication PlatformApplication;
+	FPlatform Platform;
+
+private:
+	/*
+	 * Is app due to shutdown next tick?
+	 */
+	bool bShouldShutdownNextTick = false;
 };

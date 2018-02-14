@@ -1,24 +1,21 @@
-//Win32Window.h
+//Win32PlatformWindow.h
 //Created 19/04/17
 //Created By Daniel Bowler
 //
 //Represents an Win32 OS window
-//
-//TODO: Move some of the code from Win32App over to here (Eg: The window creation & 
-//registration code). 
 
 #pragma once
 
-#include <HAL/Window/IWindow.h>
+#include <HAL/PlatformWindow/IPlatformWindow.h>
 
 //Windows
 #include <Windows.h>
 
-class FWin32Window : public IWindow
+class FWin32PlatformWindow : public IPlatformWindow
 {
 public:
-	FWin32Window() {};
-	virtual ~FWin32Window() {};
+	FWin32PlatformWindow() {};
+	virtual ~FWin32PlatformWindow() = 0 {};
 
 	/*
 	* IWindow interface

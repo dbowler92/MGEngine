@@ -1,4 +1,4 @@
-//IApplication.h
+//IPlatform.h
 //Created 12/01/18
 //Created By Daniel Bowler
 //
@@ -10,9 +10,14 @@
 
 #include <Core/CoreInclude.h>
 
-class IApplication
+class IPlatform
 {
 public:
+	/*
+	 * Virtual Destructor
+	 */
+	virtual ~IPlatform() = 0 {};
+
 	/*
 	* Inits the OS related stuff - eg: Creates the window, message pump, etc
 	*/
@@ -29,7 +34,7 @@ public:
 	* Called each frame before the main game loop is executed - Do
 	* platform specific work
 	*/
-	virtual void OnPreMainGameLoopTick() = 0;
+	virtual void OnPlatformTick() = 0;
 
 	/*
 	* Called during engine shutdown
@@ -39,5 +44,5 @@ public:
 	/*
 	* Gets the OS window that the platform specific implementation will create and manage.
 	*/
-	virtual class IWindow* GetWindow() = 0;
+	virtual class IPlatformWindow* GetWindow() = 0;
 };

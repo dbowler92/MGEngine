@@ -1,4 +1,4 @@
-//IWindow.h
+//IPlatformWindow.h
 //Created 11/08/18
 //Created By Daniel Bowler
 //
@@ -6,10 +6,12 @@
 
 #pragma once
 
-class IWindow
+#include <Core/CoreInclude.h>
+
+class IPlatformWindow
 {
 public:
-	virtual ~IWindow() = 0 {};
+	virtual ~IPlatformWindow() = 0 {};
 
 	virtual void UpdateWindowWidth(unsigned w) = 0;
 	virtual void UpdateWindowHeight(unsigned h) = 0;

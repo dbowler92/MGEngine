@@ -1,33 +1,15 @@
 //PlatformTimer.h
-//Created 26/07/16
-//Created By Daniel Bowler
+//Created 04/02/18
+//Created by Daniel Bowler
 //
-//W32 timer - TODO: Multiplatform - interface 
+//Platform timer.
 
 #pragma once
 
-class FPlatformTimer
-{
-public:
-	FPlatformTimer();
+#include <Core/CoreInclude.h>
 
-	float TotalTime()const;  // in seconds
-	float DeltaTime()const; // in seconds
+#ifdef PLATFORM_WINDOWS
+#include "Win32/Win32PlatformTimer.h" 
 
-	void Reset(); // Call before message loop.
-	void Start(); // Call when unpaused.
-	void Stop();  // Call when paused.
-	void Tick();  // Call every frame.
-
-private:
-	double mSecondsPerCount;
-	double mDeltaTime;
-
-	__int64 mBaseTime;
-	__int64 mPausedTime;
-	__int64 mStopTime;
-	__int64 mPrevTime;
-	__int64 mCurrTime;
-
-	bool mStopped;
-};
+GENERATE_PLATFORM_AGNOSTIC_CLASS(FPlatformTimer, FWin32PlatformTimer)
+#endif 

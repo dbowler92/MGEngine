@@ -1,7 +1,7 @@
-#include "PlatformTimer.h"
+#include "Win32PlatformTimer.h"
 #include <windows.h>
 
-FPlatformTimer::FPlatformTimer()
+FWin32PlatformTimer::FWin32PlatformTimer()
 	: mSecondsPerCount(0.0), mDeltaTime(-1.0), mBaseTime(0),
 	mPausedTime(0), mPrevTime(0), mCurrTime(0), mStopped(false)
 {
@@ -12,7 +12,7 @@ FPlatformTimer::FPlatformTimer()
 
 // Returns the total time elapsed since Reset() was called, NOT counting any
 // time when the clock is stopped.
-float FPlatformTimer::TotalTime()const
+float FWin32PlatformTimer::TotalTime()const
 {
 	// If we are stopped, do not count the time that has passed since we stopped.
 	// Moreover, if we previously already had a pause, the distance 
@@ -44,12 +44,12 @@ float FPlatformTimer::TotalTime()const
 	}
 }
 
-float FPlatformTimer::DeltaTime()const
+float FWin32PlatformTimer::DeltaTime()const
 {
 	return (float)mDeltaTime;
 }
 
-void FPlatformTimer::Reset()
+void FWin32PlatformTimer::Reset()
 {
 	__int64 currTime;
 	QueryPerformanceCounter((LARGE_INTEGER*)&currTime);
@@ -60,7 +60,7 @@ void FPlatformTimer::Reset()
 	mStopped = false;
 }
 
-void FPlatformTimer::Start()
+void FWin32PlatformTimer::Start()
 {
 	__int64 startTime;
 	QueryPerformanceCounter((LARGE_INTEGER*)&startTime);
@@ -82,7 +82,7 @@ void FPlatformTimer::Start()
 	}
 }
 
-void FPlatformTimer::Stop()
+void FWin32PlatformTimer::Stop()
 {
 	if (!mStopped)
 	{
@@ -94,7 +94,7 @@ void FPlatformTimer::Stop()
 	}
 }
 
-void FPlatformTimer::Tick()
+void FWin32PlatformTimer::Tick()
 {
 	if (mStopped)
 	{

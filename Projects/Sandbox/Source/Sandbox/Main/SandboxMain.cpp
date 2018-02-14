@@ -19,11 +19,11 @@
 INT WINAPI wWinMain(HINSTANCE HInstance, HINSTANCE HPrevInstance, LPWSTR LpCmdLine, int CmdShow)    
 {
 	//Set up simple checks for memory leaks in windows.  
-#ifdef CONFIGURATION_DEBUG
+#if defined(CONFIGURATION_DEBUG) || defined(CONFIGURATION_DEVELOPMENT)
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 #endif
 
 	FSandboxAppDelegate AppDelegate;
-	return FEngine::Start((void*)HInstance, (void*)LpCmdLine, "Sandbox", &AppDelegate);
+	return FEngine::Get().Run((void*)HInstance, (void*)LpCmdLine, "Sandbox", &AppDelegate);
 }                
 #endif 
