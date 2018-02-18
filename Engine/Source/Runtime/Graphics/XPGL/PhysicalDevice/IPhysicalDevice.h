@@ -21,6 +21,11 @@ public:
 
 public:
 	/**
+	 * Returns the (physical) device index
+	 */
+	virtual uint32 GetPhysicalDeviceIndex() = 0;
+
+	/**
 	* Returns the adapter name - Nullptr if error of some sort.
 	*/
 	virtual const char* GetPhysicalDeviceName() = 0;

@@ -7,7 +7,7 @@
 #pragma once
 
 //Define the graphics API we are using
-#define _GRAPHICS_D3D12
+#define _GRAPHICS_USE_D3D12
 
 //Libs
 #pragma comment(lib, "dxgi.lib")

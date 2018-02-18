@@ -17,12 +17,12 @@
 #include <dxgi1_6.h>
 #endif
 
-class FAdapterOutput;
+class FD3D12GraphicsSystemInfo;
 
 class FD3D12PhysicalDevice : public IPhysicalDevice
 {
 	//FD3D12GraphicsSystemInfo will init and destroy each physical device. 
-	friend class FD3D12GraphicsSystemInfo;
+	friend FD3D12GraphicsSystemInfo;
 
 public:
 	/**
@@ -31,6 +31,11 @@ public:
 	bool RefreshCachedAdapterOutputs() override;
 
 public:
+	/**
+	 * Returns the (physical) device index
+	 */
+	uint32 GetPhysicalDeviceIndex() override { return PhysicalDeviceIndex; };
+
 	/**
 	 * Returns the adapter name
 	 */
@@ -100,6 +105,11 @@ private:
 	 */
 	DXGI_ADAPTER_DESC1 DXGIAdapterDesc;
 #endif
+
+	/**
+	 * Physical device index
+	 */
+	uint32 PhysicalDeviceIndex = 0xffffffff;
 
 	/**
 	 * Adapter name - Eg: NVIDIA GTX 970. TODO: Don't really want to be storing this

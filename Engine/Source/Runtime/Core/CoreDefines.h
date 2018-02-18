@@ -9,7 +9,7 @@
 //Work out defines now that we have more info
 //
 //Set via via <Platform>Config.h
-#ifdef _GRAPHICS_D3D12
+#ifdef _GRAPHICS_USE_D3D12
 #define GRAPHICS_D3D12
 #define GRAPHICS_API_D3D12
 
@@ -20,7 +20,7 @@
 
 #endif
 
-#ifdef _GRAPHICS_VULKAN
+#ifdef _GRAPHICS_USE_VULKAN
 #define GRAPHICS_VULKAN
 #define GRAPHICS_API_VULKAN
 

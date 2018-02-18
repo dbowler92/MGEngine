@@ -27,41 +27,64 @@ class FD3D12AdapterOutput : public IAdapterOutput
 
 public:
 	/**
-	 * 
+	 * Gets the name of the output device
 	 */
+	const char* GetOutputDeviceName() override { return OutputDeviceName; };
+
+	/**
+	* TODO: Ask this AdapterOutput, for a given format (Will need to have a platform
+	* independent way of handling formats - a map? Which maps from platform independent
+	* format (Eg: MGE_FORMAT_RGBA8_UNORM) to API specifc (Eg: DXGI_FORMAT_R8G8B8A8_UNORM) - via a macro)
+	* what the resolution is, refresh rate, etc
+	* 
+	* Maybe even cache this info at init time...
+	*/
 
 public:
 	/**
 	 * D3D12 getters
 	 */
 #if IDXGI_FACTORY_VERSION == 4
-	IDXGIOutput1* GetDXGIOutput() { return DXGIOutput; };
+	IDXGIOutput* GetDXGIOutput() { return DXGIOutput; };
 	DXGI_OUTPUT_DESC* GetOutputDesc() { return &DXGIOutputDesc; };
 #endif
 
 protected:
 	/**
-	* Virtual Destructor - Hidden.
-	*/
+	 * Virtual Destructor - Hidden.
+   */
 	virtual ~FD3D12AdapterOutput() = 0;
-
+	 
 private:
 	/**
-	* Called by <Platform>PhysicalDevice - inits a single adapter output (eg monitor). Caches
-	* useful info - eg: resolution etc.
-	*/
-	bool InitAdapterOutput(unsigned OutputIndex, FPhysicalDevice* PhysicalDevice) override;
+ 	 * Called by <Platform>PhysicalDevice - inits a single adapter output (eg monitor). Caches
+	 * useful info - eg: resolution etc.
+	 */
+	bool InitAdapterOutput(unsigned OutputIndex, IPhysicalDevice* PhysicalDevice) override;
 
 private:
 #if IDXGI_FACTORY_VERSION == 4
 	/**
 	 * DXGI Output - We will have to release this before the app closes
 	 */
-	IDXGIOutput1* DXGIOutput = nullptr;
+	IDXGIOutput* DXGIOutput = nullptr;
 
 	/**
 	 * Caches some useful info for us regarding this Output
 	 */
 	DXGI_OUTPUT_DESC DXGIOutputDesc;
 #endif
+
+	/**
+	 * Output device index
+	 */
+	uint32 OutputDeviceIndex = 0xffffffff;
+
+	/**
+	 * Output device name. TODO: Don't really want to be storing this
+	 * buffer twice (it already exists, in WCHAR form, in DXGI_ADAPTER_DESC1.Description...
+	 *
+	 * Need own string class and/or platform independent WCHAR
+	 */
+	char OutputDeviceName[32];
 };

@@ -21,6 +21,9 @@ bool FD3D12PhysicalDevice::InitPhysicalDevice(unsigned AdapterIndex)
 	//Ensure not reiniting...
 	assert(DXGIAdapter == nullptr);
 
+	//Cache index
+	PhysicalDeviceIndex = AdapterIndex;
+
 	//Get DXGIFactory
 #if IDXGI_FACTORY_VERSION == 4
 	IDXGIFactory4* DXGIFactory = nullptr;
@@ -80,7 +83,7 @@ bool FD3D12PhysicalDevice::RefreshCachedAdapterOutputs()
 
 			for (unsigned i = 0; i < CachedOutputAdaptersCount; i++)
 			{
-				CachedAdapterOutputsArray[i].InitAdapterOutput(i, (FPhysicalDevice*)this);
+				CachedAdapterOutputsArray[i].InitAdapterOutput(i, this);
 			}
 		}
 	}

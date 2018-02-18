@@ -6,6 +6,7 @@
 #include <HAL/Platform/Platform.h>
 
 #include <Graphics/XPGL/PhysicalDevice/PhysicalDevice.h>
+#include <Graphics/XPGL/AdapterOutput/AdapterOutput.h>
 
 bool FLowLevelGraphics::Start(FPlatform* PlatformApp)
 {
@@ -54,20 +55,32 @@ void FLowLevelGraphics::LogPhysicalDevices(bool bLogOutputDevices)
 		
 		for (unsigned i = 0; i < PhysicalDeviceCount; i++)
 		{
-			std::string s = "Physical Device ";
-			s += std::to_string(i);
-			s += ": ";
-			s += PhysicalDevices[i].GetPhysicalDeviceName();
-			s += " - Dedicated memory (Bytes): ";
-			s += std::to_string(PhysicalDevices[i].GetDeviceDedicatedVideoMemoryInBytes());
-			s += " | System memory (Bytes): ";
-			s += std::to_string(PhysicalDevices[i].GetDeviceDedicatedSystemMemoryInBytes());
+			std::string ds = "Physical Device ";
+			ds += std::to_string(i);
+			ds += ": ";
+			ds += PhysicalDevices[i].GetPhysicalDeviceName();
+			ds += " - Dedicated memory (Bytes): ";
+			ds += std::to_string(PhysicalDevices[i].GetDeviceDedicatedVideoMemoryInBytes());
+			ds += " | System memory (Bytes): ";
+			ds += std::to_string(PhysicalDevices[i].GetDeviceDedicatedSystemMemoryInBytes());
 			
-			FDebugLog::PrintInfoMessage(s.c_str());
+			FDebugLog::PrintInfoMessage(ds.c_str());
 
 			if (bLogOutputDevices)
 			{
-				std::string os = "";
+				if (PhysicalDevices[i].GetAdapterOutputCount() > 0)
+				{
+					FAdapterOutput* AdapterOutputs = PhysicalDevices[i].GetAdapterOutputs();
+					for (unsigned j = 0; j < PhysicalDevices[i].GetAdapterOutputCount(); j++)
+					{
+						std::string os = "Adapter Output Device: ";
+						os += std::to_string(j);
+						os += ": ";
+						os += AdapterOutputs[j].GetOutputDeviceName();
+
+						FDebugLog::PrintInfoMessage(os.c_str());
+					}
+				}
 			}
 		}
 	}
