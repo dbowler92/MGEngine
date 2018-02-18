@@ -1,7 +1,11 @@
 #include "LowLevelGraphics.h"
 
+#include <string>
+
 #include <Debugging/Log/DebugLog.h>
 #include <HAL/Platform/Platform.h>
+
+#include <Graphics/XPGL/PhysicalDevice/PhysicalDevice.h>
 
 bool FLowLevelGraphics::Start(FPlatform* PlatformApp)
 {
@@ -14,12 +18,8 @@ bool FLowLevelGraphics::Start(FPlatform* PlatformApp)
 
 	//Enumerate physical devices and log them
 	assert(GraphicsSystemInfo.EnumerateAndCachePhysicalDevices());
-	LogPhysicalDevices();
+	LogPhysicalDevices(true);
 
-	//Enumerate output devices (Eg: Monitors) and log them
-	assert(GraphicsSystemInfo.EnumerateAndCacheOutputAdapters());
-	LogAttachedOutputAdapters();
-	
 	//Swapchain creation (TODO: May not actually be required depending on application)?
 
 	//Logical Device(s)
@@ -43,12 +43,32 @@ bool FLowLevelGraphics::Shutdown()
 	return true;
 }
 
-void FLowLevelGraphics::LogPhysicalDevices()
+void FLowLevelGraphics::LogPhysicalDevices(bool bLogOutputDevices)
 {
+	unsigned PhysicalDeviceCount = GraphicsSystemInfo.GetPhysicalDeviceCount();
+	FPhysicalDevice* PhysicalDevices = GraphicsSystemInfo.GetPhysicalDevices();
 
-}
+	if (PhysicalDeviceCount > 0 && PhysicalDevices != nullptr)
+	{
+		FDebugLog::PrintInfoMessage("Enumerating Attached Physical Devices...");
+		
+		for (unsigned i = 0; i < PhysicalDeviceCount; i++)
+		{
+			std::string s = "Physical Device ";
+			s += std::to_string(i);
+			s += ": ";
+			s += PhysicalDevices[i].GetPhysicalDeviceName();
+			s += " - Dedicated memory (Bytes): ";
+			s += std::to_string(PhysicalDevices[i].GetDeviceDedicatedVideoMemoryInBytes());
+			s += " | System memory (Bytes): ";
+			s += std::to_string(PhysicalDevices[i].GetDeviceDedicatedSystemMemoryInBytes());
+			
+			FDebugLog::PrintInfoMessage(s.c_str());
 
-void FLowLevelGraphics::LogAttachedOutputAdapters()
-{
-	
+			if (bLogOutputDevices)
+			{
+				std::string os = "";
+			}
+		}
+	}
 }

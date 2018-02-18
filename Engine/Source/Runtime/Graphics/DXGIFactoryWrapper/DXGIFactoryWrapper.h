@@ -1,4 +1,4 @@
-//DXGIWrapper.h
+//DXGIFactoryWrapper.h
 //Created 11/02/18
 //Created By Daniel Bowler
 // 
@@ -15,22 +15,31 @@
 //DXGI header
 #if IDXGI_FACTORY_VERSION == 4
 #include <dxgi1_4.h>
+#elif IDXGI_FACTORY_VERSION == 5
+#include <dxgi1_5.h>
+#elif IDXGI_FACTORY_VERSION == 6
+#include <dxgi1_6.h>
 #endif
 
-class FDXGIWrapper
+class FDXGIFactoryWrapper
 {
-	HIDE_CONSTRUCTOR(FDXGIWrapper); 
-	HIDE_COPY_ASSIGNMENT(FDXGIWrapper);
+	HIDE_CONSTRUCTOR(FDXGIFactoryWrapper);
+	HIDE_COPY_ASSIGNMENT(FDXGIFactoryWrapper);
 
 public:
 	/*
 	 * Get the singleton instance
 	 */
-	inline static FDXGIWrapper& Get()
+	inline static FDXGIFactoryWrapper& Get()
 	{
-		static FDXGIWrapper Instance;
+		static FDXGIFactoryWrapper Instance;
 		return Instance;
 	}
+
+	/*
+	 * Gets the DXGI Version
+	 */
+	UINT8 GetDXGIVersion() { return (UINT8)IDXGI_FACTORY_VERSION; };
 
 	/*
 	 * Gets the cached IDXGIFactory* object - we use this, in D3D, to create the swapchain
@@ -50,13 +59,13 @@ private:
 	/*
 	 * Destructor - Will cleanup the DXGI factory for us
 	 */
-	~FDXGIWrapper();
+	~FDXGIFactoryWrapper();
 
 	/*
 	 * Cached IDXGIFactory
 	 */
 #if IDXGI_FACTORY_VERSION == 4
 	IDXGIFactory4* DXGIFactory = nullptr;
-	bool CreateDXGIFactory4(bool bEnableDXGIDebugging);
+	bool CreateDXGIFactory(bool bEnableDXGIDebugging);
 #endif
 };

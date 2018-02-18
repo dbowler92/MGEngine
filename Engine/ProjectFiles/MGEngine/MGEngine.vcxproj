@@ -127,7 +127,7 @@
     <ClInclude Include="..\..\Source\Runtime\Core\CoreTypes.h" />
     <ClInclude Include="..\..\Source\Runtime\Core\Engine\Engine.h" />
     <ClInclude Include="..\..\Source\Runtime\Debugging\Log\DebugLog.h" />
-    <ClInclude Include="..\..\Source\Runtime\Graphics\DXGIWrapper\DXGIWrapper.h" />
+    <ClInclude Include="..\..\Source\Runtime\Graphics\DXGIFactoryWrapper\DXGIFactoryWrapper.h" />
     <ClInclude Include="..\..\Source\Runtime\Graphics\GraphicsAPIStartup\D3D12\D3D12GraphicsAPIStartup.h" />
     <ClInclude Include="..\..\Source\Runtime\Graphics\GraphicsAPIStartup\GraphicsAPIStartup.h" />
     <ClInclude Include="..\..\Source\Runtime\Graphics\GraphicsAPIStartup\IGraphicsAPIStartup.h" />
@@ -135,6 +135,12 @@
     <ClInclude Include="..\..\Source\Runtime\Graphics\GraphicsSystemInfo\GraphicsSystemInfo.h" />
     <ClInclude Include="..\..\Source\Runtime\Graphics\GraphicsSystemInfo\IGraphicsSystemInfo.h" />
     <ClInclude Include="..\..\Source\Runtime\Graphics\LowLevelGraphics\LowLevelGraphics.h" />
+    <ClInclude Include="..\..\Source\Runtime\Graphics\XPGL\AdapterOutput\AdapterOutput.h" />
+    <ClInclude Include="..\..\Source\Runtime\Graphics\XPGL\AdapterOutput\D3D12\D3D12AdapterOutput.h" />
+    <ClInclude Include="..\..\Source\Runtime\Graphics\XPGL\AdapterOutput\IAdapterOutput.h" />
+    <ClInclude Include="..\..\Source\Runtime\Graphics\XPGL\PhysicalDevice\D3D12\D3D12PhysicalDevice.h" />
+    <ClInclude Include="..\..\Source\Runtime\Graphics\XPGL\PhysicalDevice\IPhysicalDevice.h" />
+    <ClInclude Include="..\..\Source\Runtime\Graphics\XPGL\PhysicalDevice\PhysicalDevice.h" />
     <ClInclude Include="..\..\Source\Runtime\HAL\PlatformTimer\IPlatformTimer.h" />
     <ClInclude Include="..\..\Source\Runtime\HAL\PlatformTimer\PlatformTimer.h" />
     <ClInclude Include="..\..\Source\Runtime\HAL\PlatformTimer\Win32\Win32PlatformTimer.h" />
@@ -159,10 +165,12 @@
   <ItemGroup>
     <ClCompile Include="..\..\Source\Runtime\Core\Engine\Engine.cpp" />
     <ClCompile Include="..\..\Source\Runtime\Debugging\Log\DebugLog.cpp" />
-    <ClCompile Include="..\..\Source\Runtime\Graphics\DXGIWrapper\DXGIWrapper.cpp" />
+    <ClCompile Include="..\..\Source\Runtime\Graphics\DXGIFactoryWrapper\DXGIFactoryWrapper.cpp" />
     <ClCompile Include="..\..\Source\Runtime\Graphics\GraphicsAPIStartup\D3D12\D3D12GraphicsAPIStartup.cpp" />
     <ClCompile Include="..\..\Source\Runtime\Graphics\GraphicsSystemInfo\D3D12\D3D12GraphicsSystemInfo.cpp" />
     <ClCompile Include="..\..\Source\Runtime\Graphics\LowLevelGraphics\LowLevelGraphics.cpp" />
+    <ClCompile Include="..\..\Source\Runtime\Graphics\XPGL\AdapterOutput\D3D12\D3D12AdapterOutput.cpp" />
+    <ClCompile Include="..\..\Source\Runtime\Graphics\XPGL\PhysicalDevice\D3D12\D3D12PhysicalDevice.cpp" />
     <ClCompile Include="..\..\Source\Runtime\HAL\PlatformTimer\Win32\Win32PlatformTimer.cpp" />
     <ClCompile Include="..\..\Source\Runtime\HAL\PlatformWindow\Win32\Win32PlatformWindow.cpp" />
     <ClCompile Include="..\..\Source\Runtime\HAL\Platform\Win32\Win32Platform.cpp" />

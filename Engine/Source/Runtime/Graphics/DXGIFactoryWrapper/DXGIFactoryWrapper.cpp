@@ -1,15 +1,15 @@
-#include "DXGIWrapper.h"
+#include "DXGIFactoryWrapper.h"
 
 #include <assert.h>
 
 #include <Debugging/Log/DebugLog.h>
 
-FDXGIWrapper::~FDXGIWrapper()
+FDXGIFactoryWrapper::~FDXGIFactoryWrapper()
 {
 	ReleaseDXGIFactory();
 }
 
-void FDXGIWrapper::ReleaseDXGIFactory()
+void FDXGIFactoryWrapper::ReleaseDXGIFactory()
 {
 	if (DXGIFactory)
 	{
@@ -19,7 +19,7 @@ void FDXGIWrapper::ReleaseDXGIFactory()
 }
 
 #if IDXGI_FACTORY_VERSION == 4
-IDXGIFactory4* FDXGIWrapper::GetDXGIFactory()
+IDXGIFactory4* FDXGIFactoryWrapper::GetDXGIFactory()
 {
 	if (DXGIFactory == nullptr)
 	{
@@ -30,14 +30,17 @@ IDXGIFactory4* FDXGIWrapper::GetDXGIFactory()
 		bool bDebuggingDXGI = false;
 #endif
 
-		assert(CreateDXGIFactory4(bDebuggingDXGI));
+		assert(CreateDXGIFactory(bDebuggingDXGI));
 	}
 
 	return DXGIFactory;
 }
 
-bool FDXGIWrapper::CreateDXGIFactory4(bool bEnableDXGIDebugging)
+bool FDXGIFactoryWrapper::CreateDXGIFactory(bool bEnableDXGIDebugging)
 {
+	//DXGI Version
+	FDebugLog::PrintInfoMessage("Creating new IDXGIFactory - Version: 1.4");
+
 	//IDXGIFactory version 4
 	UINT Flags = 0;
 
@@ -58,4 +61,4 @@ bool FDXGIWrapper::CreateDXGIFactory4(bool bEnableDXGIDebugging)
 
 	return true;
 }
-#endif
+#endif //IDXGI_FACTORY_VERSION == 4

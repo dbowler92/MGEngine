@@ -16,34 +16,38 @@ class FD3D12GraphicsSystemInfo : public IGraphicsSystemInfo
 	friend class FLowLevelGraphics;
 
 public:
-	/*
-	* TODO: Get the physical devices attached to this system
-	*/
+	/**
+	 * Get the number of physical devices attached to this system
+	 */
+	unsigned GetPhysicalDeviceCount() override { return PhysicalDeviceCount; };
 
-	/*
-	* TODO: Get the output adapters attached to this system
-	*/
+	/**
+	 * Gets a pointer to an array of physical devices
+	 */
+	FPhysicalDevice* GetPhysicalDevices() override { return PhysicalDevicesArray; };
 
 protected:
-	/*
-	* Enumerates physical devices
-	*/
+	/**
+	 * Virtual destructor - hidden
+	 */
+	virtual ~FD3D12GraphicsSystemInfo() = 0;
+
+private:
+	/**
+	 * Enumerates physical devices + caches the output devices attached to
+	 * said physical device at engine startup
+	 */
 	bool EnumerateAndCachePhysicalDevices() override;
 
-	/*
-	* Enumerates output adapters - eg: monitors attached to this system
-	*/
-	bool EnumerateAndCacheOutputAdapters() override;
-
-	/*
+	/**
 	* Called during engine shutdown - clear any cached data
 	*/
 	void ClearCachedData() override;
 
-protected:
-	/*
-	* Virtual destructor - hidden
-	*/
-	virtual ~FD3D12GraphicsSystemInfo() = 0 {};
-
+private:
+	/**
+	 * The physical devices attached to this system compatable with D3D12
+	 */
+	unsigned PhysicalDeviceCount = 0;
+	FPhysicalDevice* PhysicalDevicesArray = nullptr;
 };

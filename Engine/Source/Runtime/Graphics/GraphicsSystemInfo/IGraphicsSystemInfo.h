@@ -10,43 +10,43 @@
 
 #include <Core/CoreInclude.h>
 
+class FPhysicalDevice;
+
 class IGraphicsSystemInfo
 {
 public:
-	/*
-	 * TODO: Get the physical devices attached to this system
+	/**
+	 * Get the number of physical devices attached to this system
 	 */
+	virtual unsigned GetPhysicalDeviceCount() = 0;
 
-	/*
-	 * TODO: Get the output adapters attached to this system
+	/**
+	 * Gets a pointer to an array of physical devices
 	 */
+	virtual FPhysicalDevice* GetPhysicalDevices() = 0;
 
-protected:
-	/*
-	* Enumerates physical devices
-	*/
+private:
+	/**
+	 * Enumerates physical devices + caches the output devices attached to
+	 * said physical device at engine startup
+	 */
 	virtual bool EnumerateAndCachePhysicalDevices() = 0;
 
-	/*
-	* Enumerates output adapters - eg: monitors attached to this system
-	*/
-	virtual bool EnumerateAndCacheOutputAdapters() = 0;
-
-	/*
-	* Called during engine shutdown - clear any cached data
-	*/
+	/**
+	 * Called during engine shutdown - clear any cached data
+	 */
 	virtual void ClearCachedData() = 0;
 
 protected:
-	/*
-	* Hide constructors - only FLowLevelGraphics should create an instance of this.
-	*/
+	/**
+	 * Hide constructors - only FLowLevelGraphics should create an instance of this.
+	 */
 	IGraphicsSystemInfo() {};
 	IGraphicsSystemInfo(IGraphicsSystemInfo& other);
 	IGraphicsSystemInfo& operator=(IGraphicsSystemInfo& other);
 
-	/*
-	* Virtual destructor - hidden
-	*/
+	/**
+	 * Virtual destructor - hidden
+	 */
 	virtual ~IGraphicsSystemInfo() = 0 {};
 };

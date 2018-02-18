@@ -177,7 +177,7 @@ bool FWin32Platform::InitWin32App(const char* AppTitle)
 	WC.hbrBackground = (HBRUSH)GetStockObject(NULL_BRUSH);
 	WC.lpszMenuName = 0;
 	WC.lpszClassName = L"WndClassName";
-
+	  
 	if (!RegisterClass(&WC))
 	{
 		MessageBox(0, L"RegisterClass Failed.", 0, 0);

@@ -127,7 +127,4 @@ void FEngine::LogSystemInfo()
 	//RAM	
 	Str = "Installed System RAM (Bytes): " + std::to_string(SystemInfo.GetSystemRAMInBytes()) + " (MB): " + std::to_string(SystemInfo.GetSystemRAMInMB());
 	FDebugLog::PrintInfoMessage(Str.c_str());
-
-	//End
-	FDebugLog::PrintInfoMessage("*****************System Info*****************");
 }

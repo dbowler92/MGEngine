@@ -88,20 +88,11 @@
     <Filter Include="Source\Runtime\Graphics\XPGL">
       <UniqueIdentifier>{16a53aac-0e07-4d98-928b-4f5e64624403}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source\Runtime\Graphics\DXGIWrapper">
-      <UniqueIdentifier>{36967a6b-0f52-498e-8d14-bf140a2408bc}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source\Runtime\Graphics\VulkanLoader">
       <UniqueIdentifier>{22d0de2f-37cb-4afa-a13e-bad8a0219ab4}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source\Runtime\Graphics\LowLevelGraphics">
       <UniqueIdentifier>{0a9a7dfa-18fc-4d10-94dc-25211e303931}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Runtime\Graphics\XPGL\LogicalGraphicsDevice">
-      <UniqueIdentifier>{473ce306-7aea-4736-9345-367f027a930d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Runtime\Graphics\XPGL\GraphicsOutputDevice">
-      <UniqueIdentifier>{45cf40bd-f50b-4859-bf72-0436ddb7ab09}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source\Runtime\Graphics\GraphicsAPIStartup">
       <UniqueIdentifier>{86154382-2d64-4c0c-b568-fa30e5391171}</UniqueIdentifier>
@@ -120,6 +111,21 @@
     </Filter>
     <Filter Include="Source\Runtime\Graphics\GraphicsSystemInfo\Vulkan">
       <UniqueIdentifier>{0c8af1b9-2e18-413a-a761-97124ac47a31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Runtime\Graphics\DXGIFactoryWrapper">
+      <UniqueIdentifier>{36967a6b-0f52-498e-8d14-bf140a2408bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Runtime\Graphics\XPGL\AdapterOutput">
+      <UniqueIdentifier>{473ce306-7aea-4736-9345-367f027a930d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Runtime\Graphics\XPGL\AdapterOutput\D3D12">
+      <UniqueIdentifier>{5699db9d-6b7d-4170-a54d-7ad605bf06dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Runtime\Graphics\XPGL\PhysicalDevice">
+      <UniqueIdentifier>{45cf40bd-f50b-4859-bf72-0436ddb7ab09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Runtime\Graphics\XPGL\PhysicalDevice\D3D12">
+      <UniqueIdentifier>{514a69d9-1edc-46cb-99cb-60567dcb23a7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -228,9 +234,6 @@
     <ClInclude Include="..\..\Source\Runtime\HAL\SystemInfo\Win32\Win32SystemInfo.h">
       <Filter>Source\Runtime\HAL\SystemInfo\Win32</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\Runtime\Graphics\DXGIWrapper\DXGIWrapper.h">
-      <Filter>Source\Runtime\Graphics\DXGIWrapper</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\Source\Runtime\Graphics\LowLevelGraphics\LowLevelGraphics.h">
       <Filter>Source\Runtime\Graphics\LowLevelGraphics</Filter>
     </ClInclude>
@@ -251,6 +254,27 @@
     </ClInclude>
     <ClInclude Include="..\..\Source\Runtime\Graphics\GraphicsSystemInfo\GraphicsSystemInfo.h">
       <Filter>Source\Runtime\Graphics\GraphicsSystemInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Runtime\Graphics\DXGIFactoryWrapper\DXGIFactoryWrapper.h">
+      <Filter>Source\Runtime\Graphics\DXGIFactoryWrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Runtime\Graphics\XPGL\PhysicalDevice\PhysicalDevice.h">
+      <Filter>Source\Runtime\Graphics\XPGL\PhysicalDevice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Runtime\Graphics\XPGL\PhysicalDevice\IPhysicalDevice.h">
+      <Filter>Source\Runtime\Graphics\XPGL\PhysicalDevice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Runtime\Graphics\XPGL\PhysicalDevice\D3D12\D3D12PhysicalDevice.h">
+      <Filter>Source\Runtime\Graphics\XPGL\PhysicalDevice\D3D12</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Runtime\Graphics\XPGL\AdapterOutput\IAdapterOutput.h">
+      <Filter>Source\Runtime\Graphics\XPGL\AdapterOutput</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Runtime\Graphics\XPGL\AdapterOutput\AdapterOutput.h">
+      <Filter>Source\Runtime\Graphics\XPGL\AdapterOutput</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Runtime\Graphics\XPGL\AdapterOutput\D3D12\D3D12AdapterOutput.h">
+      <Filter>Source\Runtime\Graphics\XPGL\AdapterOutput\D3D12</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -278,9 +302,6 @@
     <ClCompile Include="..\..\Source\Runtime\HAL\SystemInfo\Win32\Win32SystemInfo.cpp">
       <Filter>Source\Runtime\HAL\SystemInfo\Win32</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\Runtime\Graphics\DXGIWrapper\DXGIWrapper.cpp">
-      <Filter>Source\Runtime\Graphics\DXGIWrapper</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Source\Runtime\Graphics\LowLevelGraphics\LowLevelGraphics.cpp">
       <Filter>Source\Runtime\Graphics\LowLevelGraphics</Filter>
     </ClCompile>
@@ -289,6 +310,15 @@
     </ClCompile>
     <ClCompile Include="..\..\Source\Runtime\Graphics\GraphicsSystemInfo\D3D12\D3D12GraphicsSystemInfo.cpp">
       <Filter>Source\Runtime\Graphics\GraphicsSystemInfo\D3D12</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Runtime\Graphics\DXGIFactoryWrapper\DXGIFactoryWrapper.cpp">
+      <Filter>Source\Runtime\Graphics\DXGIFactoryWrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Runtime\Graphics\XPGL\PhysicalDevice\D3D12\D3D12PhysicalDevice.cpp">
+      <Filter>Source\Runtime\Graphics\XPGL\PhysicalDevice\D3D12</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Runtime\Graphics\XPGL\AdapterOutput\D3D12\D3D12AdapterOutput.cpp">
+      <Filter>Source\Runtime\Graphics\XPGL\AdapterOutput\D3D12</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -52,8 +52,7 @@ private:
 	 * Debug logs the physical devices and the attached output adapters to the console
 	 * after they have been cached (FGraphicsSystemInfo)
 	 */
-	void LogPhysicalDevices();
-	void LogAttachedOutputAdapters();
+	void LogPhysicalDevices(bool bLogOutputDevices);
 
 private:
 	/*
