@@ -10,315 +10,63 @@
     <Filter Include="Assets">
       <UniqueIdentifier>{2d58f059-d726-404c-9000-a808b51cf728}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Assets\Shaders">
-      <UniqueIdentifier>{105e9508-6c89-415c-9402-623f46b022ba}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source\ThirdParty">
       <UniqueIdentifier>{5598ec42-40dc-4c0b-80cd-fc8db399c3dc}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source\Runtime">
       <UniqueIdentifier>{d5b423fd-2ff5-4c70-908b-6a3d27b31764}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source\Runtime\Rendering">
-      <UniqueIdentifier>{f5642d07-fdda-442f-ad4b-09724470f0dd}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Runtime\Rendering\VirtualCamera">
-      <UniqueIdentifier>{48543690-4917-49f6-bb63-4fc45fa86797}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Runtime\Math">
-      <UniqueIdentifier>{968aca17-dba1-4d1a-8c1e-a125f301729a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Runtime\Math\Matrix">
-      <UniqueIdentifier>{7511748b-99a6-4706-a486-1c2fc18a68c4}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Runtime\Math\Vector">
-      <UniqueIdentifier>{8c49e8c8-e396-478a-944f-6c87a7348b3a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Runtime\Includes">
-      <UniqueIdentifier>{e0baa5c6-4e2d-4fc7-a5dc-bbabadae13d0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Runtime\HAL">
-      <UniqueIdentifier>{88dbd25f-7fe7-45bf-9c47-2bad73280a95}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Runtime\HAL\PlatformTimer">
-      <UniqueIdentifier>{542ad166-65ce-4866-a799-2c5f8493207f}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source\Runtime\Core">
-      <UniqueIdentifier>{a41b78d5-2b01-4607-9a2c-d014dfa05139}</UniqueIdentifier>
+      <UniqueIdentifier>{de4af132-87c3-4290-897d-b895cd75224c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source\Runtime\Core\ApplicationDelegate">
-      <UniqueIdentifier>{40899ad9-2d2c-43ac-95ba-24153f8efcf6}</UniqueIdentifier>
+    <Filter Include="Source\Runtime\Core\AppDelegate">
+      <UniqueIdentifier>{be55242c-568b-4f10-9874-820e8b30ae5f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source\Runtime\Core\Engine">
-      <UniqueIdentifier>{706f276f-fe1c-439f-8585-55434e0d922e}</UniqueIdentifier>
+    <Filter Include="Source\Runtime\Platform">
+      <UniqueIdentifier>{79a101fa-8c3c-43c4-80fb-623ba7b67c54}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source\ThirdParty\GeometryGenerator">
-      <UniqueIdentifier>{fdc26fbc-0ec5-4175-8cab-38562a623671}</UniqueIdentifier>
+    <Filter Include="Source\Runtime\Platform\Application">
+      <UniqueIdentifier>{6c099591-92cf-4830-a559-ea0bea895d50}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source\Runtime\Debugging">
-      <UniqueIdentifier>{a2cadb23-ea83-435b-9d1e-7ac5d05588ed}</UniqueIdentifier>
+    <Filter Include="Source\Runtime\Platform\Timer">
+      <UniqueIdentifier>{de0c9f9b-b087-43f9-bd01-b8ed498aeb5f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source\Runtime\Debugging\Log">
-      <UniqueIdentifier>{9b6c4d29-3085-4c3d-ab14-63a35a6f74b3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Runtime\HAL\PlatformTimer\Win32">
-      <UniqueIdentifier>{5106f9e8-9d02-44c1-865a-84dd99b82cbc}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Runtime\HAL\Platform">
-      <UniqueIdentifier>{6fd182f8-5edf-4166-a76f-c79ef955f673}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Runtime\HAL\Platform\Win32">
-      <UniqueIdentifier>{9e3f7d3e-251f-49f4-89d5-782763d18266}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Runtime\HAL\PlatformWindow">
-      <UniqueIdentifier>{bdb88a9b-4dbf-41c7-abdd-08654458db06}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Runtime\HAL\PlatformWindow\Win32">
-      <UniqueIdentifier>{ce9f51d2-5fce-42ba-98da-f77bc9cd1dfc}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Runtime\HAL\SystemInfo">
-      <UniqueIdentifier>{ed3eac5c-1ac8-495a-8176-02af71e28f22}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Runtime\HAL\SystemInfo\Win32">
-      <UniqueIdentifier>{233743ea-1663-49d9-b07c-90213fad1ecf}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Runtime\Graphics">
-      <UniqueIdentifier>{cf4f944d-4d23-4313-904c-a3f15d411f31}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Runtime\Graphics\XPGL">
-      <UniqueIdentifier>{16a53aac-0e07-4d98-928b-4f5e64624403}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Runtime\Graphics\VulkanLoader">
-      <UniqueIdentifier>{22d0de2f-37cb-4afa-a13e-bad8a0219ab4}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Runtime\Graphics\LowLevelGraphics">
-      <UniqueIdentifier>{0a9a7dfa-18fc-4d10-94dc-25211e303931}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Runtime\Graphics\GraphicsAPIStartup">
-      <UniqueIdentifier>{86154382-2d64-4c0c-b568-fa30e5391171}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Runtime\Graphics\GraphicsAPIStartup\D3D12">
-      <UniqueIdentifier>{7be001a2-0841-4a20-b7b3-f373edb60330}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Runtime\Graphics\GraphicsAPIStartup\Vulkan">
-      <UniqueIdentifier>{95fda4ab-29de-4ac2-bf1b-34d1523d71ae}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Runtime\Graphics\GraphicsSystemInfo">
-      <UniqueIdentifier>{0154ebbd-3ea3-4f30-aaf0-c15605324004}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Runtime\Graphics\GraphicsSystemInfo\D3D12">
-      <UniqueIdentifier>{cad6bc99-b48d-4b2c-9f8e-66b881bbadaa}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Runtime\Graphics\GraphicsSystemInfo\Vulkan">
-      <UniqueIdentifier>{0c8af1b9-2e18-413a-a761-97124ac47a31}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Runtime\Graphics\DXGIFactoryWrapper">
-      <UniqueIdentifier>{36967a6b-0f52-498e-8d14-bf140a2408bc}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Runtime\Graphics\XPGL\AdapterOutput">
-      <UniqueIdentifier>{473ce306-7aea-4736-9345-367f027a930d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Runtime\Graphics\XPGL\AdapterOutput\D3D12">
-      <UniqueIdentifier>{5699db9d-6b7d-4170-a54d-7ad605bf06dd}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Runtime\Graphics\XPGL\PhysicalDevice">
-      <UniqueIdentifier>{45cf40bd-f50b-4859-bf72-0436ddb7ab09}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Runtime\Graphics\XPGL\PhysicalDevice\D3D12">
-      <UniqueIdentifier>{514a69d9-1edc-46cb-99cb-60567dcb23a7}</UniqueIdentifier>
+    <Filter Include="Source\Runtime\Platform\Window">
+      <UniqueIdentifier>{6c9e9a19-dc3b-4b67-9684-16257ea50a8f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Source\Runtime\Includes\DebugIncludes.h">
-      <Filter>Source\Runtime\Includes</Filter>
+    <ClInclude Include="..\..\Source\Runtime\Core\AppDelegate\IAppDelegate.h">
+      <Filter>Source\Runtime\Core\AppDelegate</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\Runtime\Includes\GraphicsIncludes.h">
-      <Filter>Source\Runtime\Includes</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Runtime\Includes\MathIncludes.h">
-      <Filter>Source\Runtime\Includes</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Runtime\Includes\RenderingIncludes.h">
-      <Filter>Source\Runtime\Includes</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Runtime\Rendering\VirtualCamera\VirtualCamera.h">
-      <Filter>Source\Runtime\Rendering\VirtualCamera</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Runtime\Math\Vector\Vector3D.h">
-      <Filter>Source\Runtime\Math\Vector</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Runtime\Math\Matrix\Matrix3x3.h">
-      <Filter>Source\Runtime\Math\Matrix</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Runtime\Core\CoreDefines.h">
+    <ClInclude Include="..\..\Source\Runtime\Core\CoreEngine.h">
       <Filter>Source\Runtime\Core</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Runtime\Core\CoreInclude.h">
       <Filter>Source\Runtime\Core</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\Runtime\Core\CorePlatform.h">
-      <Filter>Source\Runtime\Core</Filter>
+    <ClInclude Include="..\..\Source\Runtime\Platform\Application\Win32Application.h">
+      <Filter>Source\Runtime\Platform\Application</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\Runtime\Core\CoreTypes.h">
-      <Filter>Source\Runtime\Core</Filter>
+    <ClInclude Include="..\..\Source\Runtime\Platform\Window\Win32Window.h">
+      <Filter>Source\Runtime\Platform\Window</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\Runtime\Core\Engine\Engine.h">
-      <Filter>Source\Runtime\Core\Engine</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Runtime\Core\ApplicationDelegate\IApplicationDelegate.h">
-      <Filter>Source\Runtime\Core\ApplicationDelegate</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Config\D3D12Config.h">
-      <Filter>Config</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Config\EngineConfig.h">
-      <Filter>Config</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Config\VulkanConfig.h">
-      <Filter>Config</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\ThirdParty\GeometryGenerator\GeometryGenerator.h">
-      <Filter>Source\ThirdParty\GeometryGenerator</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Runtime\Debugging\Log\DebugLog.h">
-      <Filter>Source\Runtime\Debugging\Log</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Config\WindowsConfig.h">
-      <Filter>Config</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Runtime\Core\CoreIdentifiers.h">
-      <Filter>Source\Runtime\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Runtime\Core\CoreMacros.h">
-      <Filter>Source\Runtime\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Runtime\Core\CoreBuildConfiguration.h">
-      <Filter>Source\Runtime\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Runtime\Core\CoreArchitecture.h">
-      <Filter>Source\Runtime\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Runtime\HAL\PlatformTimer\IPlatformTimer.h">
-      <Filter>Source\Runtime\HAL\PlatformTimer</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Runtime\HAL\PlatformTimer\Win32\Win32PlatformTimer.h">
-      <Filter>Source\Runtime\HAL\PlatformTimer\Win32</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Runtime\HAL\PlatformTimer\PlatformTimer.h">
-      <Filter>Source\Runtime\HAL\PlatformTimer</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Runtime\HAL\Platform\IPlatform.h">
-      <Filter>Source\Runtime\HAL\Platform</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Runtime\HAL\Platform\Platform.h">
-      <Filter>Source\Runtime\HAL\Platform</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Runtime\HAL\Platform\Win32\Win32Platform.h">
-      <Filter>Source\Runtime\HAL\Platform\Win32</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Runtime\HAL\PlatformWindow\IPlatformWindow.h">
-      <Filter>Source\Runtime\HAL\PlatformWindow</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Runtime\HAL\PlatformWindow\PlatformWindow.h">
-      <Filter>Source\Runtime\HAL\PlatformWindow</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Runtime\HAL\PlatformWindow\Win32\Win32PlatformWindow.h">
-      <Filter>Source\Runtime\HAL\PlatformWindow\Win32</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Runtime\HAL\SystemInfo\ISystemInfo.h">
-      <Filter>Source\Runtime\HAL\SystemInfo</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Runtime\HAL\SystemInfo\SystemInfo.h">
-      <Filter>Source\Runtime\HAL\SystemInfo</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Runtime\HAL\SystemInfo\Win32\Win32SystemInfo.h">
-      <Filter>Source\Runtime\HAL\SystemInfo\Win32</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Runtime\Graphics\LowLevelGraphics\LowLevelGraphics.h">
-      <Filter>Source\Runtime\Graphics\LowLevelGraphics</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Runtime\Graphics\GraphicsAPIStartup\IGraphicsAPIStartup.h">
-      <Filter>Source\Runtime\Graphics\GraphicsAPIStartup</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Runtime\Graphics\GraphicsAPIStartup\D3D12\D3D12GraphicsAPIStartup.h">
-      <Filter>Source\Runtime\Graphics\GraphicsAPIStartup\D3D12</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Runtime\Graphics\GraphicsAPIStartup\GraphicsAPIStartup.h">
-      <Filter>Source\Runtime\Graphics\GraphicsAPIStartup</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Runtime\Graphics\GraphicsSystemInfo\IGraphicsSystemInfo.h">
-      <Filter>Source\Runtime\Graphics\GraphicsSystemInfo</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Runtime\Graphics\GraphicsSystemInfo\D3D12\D3D12GraphicsSystemInfo.h">
-      <Filter>Source\Runtime\Graphics\GraphicsSystemInfo\D3D12</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Runtime\Graphics\GraphicsSystemInfo\GraphicsSystemInfo.h">
-      <Filter>Source\Runtime\Graphics\GraphicsSystemInfo</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Runtime\Graphics\DXGIFactoryWrapper\DXGIFactoryWrapper.h">
-      <Filter>Source\Runtime\Graphics\DXGIFactoryWrapper</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Runtime\Graphics\XPGL\PhysicalDevice\PhysicalDevice.h">
-      <Filter>Source\Runtime\Graphics\XPGL\PhysicalDevice</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Runtime\Graphics\XPGL\PhysicalDevice\IPhysicalDevice.h">
-      <Filter>Source\Runtime\Graphics\XPGL\PhysicalDevice</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Runtime\Graphics\XPGL\PhysicalDevice\D3D12\D3D12PhysicalDevice.h">
-      <Filter>Source\Runtime\Graphics\XPGL\PhysicalDevice\D3D12</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Runtime\Graphics\XPGL\AdapterOutput\IAdapterOutput.h">
-      <Filter>Source\Runtime\Graphics\XPGL\AdapterOutput</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Runtime\Graphics\XPGL\AdapterOutput\AdapterOutput.h">
-      <Filter>Source\Runtime\Graphics\XPGL\AdapterOutput</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Runtime\Graphics\XPGL\AdapterOutput\D3D12\D3D12AdapterOutput.h">
-      <Filter>Source\Runtime\Graphics\XPGL\AdapterOutput\D3D12</Filter>
+    <ClInclude Include="..\..\Source\Runtime\Platform\Timer\Win32PlatformTimer.h">
+      <Filter>Source\Runtime\Platform\Timer</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Source\Runtime\Rendering\VirtualCamera\VirtualCamera.cpp">
-      <Filter>Source\Runtime\Rendering\VirtualCamera</Filter>
+    <ClCompile Include="..\..\Source\Runtime\Core\CoreEngine.cpp">
+      <Filter>Source\Runtime\Core</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\Runtime\Core\Engine\Engine.cpp">
-      <Filter>Source\Runtime\Core\Engine</Filter>
+    <ClCompile Include="..\..\Source\Runtime\Platform\Application\Win32Application.cpp">
+      <Filter>Source\Runtime\Platform\Application</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\ThirdParty\GeometryGenerator\GeometryGenerator.cpp">
-      <Filter>Source\ThirdParty\GeometryGenerator</Filter>
+    <ClCompile Include="..\..\Source\Runtime\Platform\Window\Win32Window.cpp">
+      <Filter>Source\Runtime\Platform\Window</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\Runtime\Debugging\Log\DebugLog.cpp">
-      <Filter>Source\Runtime\Debugging\Log</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Runtime\HAL\PlatformTimer\Win32\Win32PlatformTimer.cpp">
-      <Filter>Source\Runtime\HAL\PlatformTimer\Win32</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Runtime\HAL\Platform\Win32\Win32Platform.cpp">
-      <Filter>Source\Runtime\HAL\Platform\Win32</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Runtime\HAL\PlatformWindow\Win32\Win32PlatformWindow.cpp">
-      <Filter>Source\Runtime\HAL\PlatformWindow\Win32</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Runtime\HAL\SystemInfo\Win32\Win32SystemInfo.cpp">
-      <Filter>Source\Runtime\HAL\SystemInfo\Win32</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Runtime\Graphics\LowLevelGraphics\LowLevelGraphics.cpp">
-      <Filter>Source\Runtime\Graphics\LowLevelGraphics</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Runtime\Graphics\GraphicsAPIStartup\D3D12\D3D12GraphicsAPIStartup.cpp">
-      <Filter>Source\Runtime\Graphics\GraphicsAPIStartup\D3D12</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Runtime\Graphics\GraphicsSystemInfo\D3D12\D3D12GraphicsSystemInfo.cpp">
-      <Filter>Source\Runtime\Graphics\GraphicsSystemInfo\D3D12</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Runtime\Graphics\DXGIFactoryWrapper\DXGIFactoryWrapper.cpp">
-      <Filter>Source\Runtime\Graphics\DXGIFactoryWrapper</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Runtime\Graphics\XPGL\PhysicalDevice\D3D12\D3D12PhysicalDevice.cpp">
-      <Filter>Source\Runtime\Graphics\XPGL\PhysicalDevice\D3D12</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Runtime\Graphics\XPGL\AdapterOutput\D3D12\D3D12AdapterOutput.cpp">
-      <Filter>Source\Runtime\Graphics\XPGL\AdapterOutput\D3D12</Filter>
+    <ClCompile Include="..\..\Source\Runtime\Platform\Timer\Win32PlatformTimer.cpp">
+      <Filter>Source\Runtime\Platform\Timer</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -10,9 +10,6 @@
     <Filter Include="Config">
       <UniqueIdentifier>{85b081e6-a91b-4c0c-b637-a22c826387bb}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Assets\Shaders">
-      <UniqueIdentifier>{cb3354d6-160e-441d-bb8a-59090868b259}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source\Sandbox">
       <UniqueIdentifier>{d1647627-6c2f-4f3f-b79f-c1858855f72c}</UniqueIdentifier>
     </Filter>
@@ -22,24 +19,21 @@
     <Filter Include="Source\Sandbox\Main">
       <UniqueIdentifier>{24dbd23a-ca7a-4337-93b0-c5ca7f056c7c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source\Sandbox\ApplicationDelegate">
+    <Filter Include="Source\Sandbox\AppDelegate">
       <UniqueIdentifier>{8e727275-0a81-4a24-87da-9cd4d3be485a}</UniqueIdentifier>
     </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\Config\AppConfig.h">
-      <Filter>Config</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Sandbox\ApplicationDelegate\SandboxAppDelegate.h">
-      <Filter>Source\Sandbox\ApplicationDelegate</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\Sandbox\Main\SandboxMain.cpp">
       <Filter>Source\Sandbox\Main</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\Sandbox\ApplicationDelegate\SandboxAppDelegate.cpp">
-      <Filter>Source\Sandbox\ApplicationDelegate</Filter>
+    <ClCompile Include="..\..\Source\Sandbox\AppDelegate\SandboxAppDelegate.cpp">
+      <Filter>Source\Sandbox\AppDelegate</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\Sandbox\AppDelegate\SandboxAppDelegate.h">
+      <Filter>Source\Sandbox\AppDelegate</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

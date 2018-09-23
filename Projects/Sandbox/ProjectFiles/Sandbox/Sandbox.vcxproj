@@ -59,14 +59,14 @@
     <OutDir>..\..\Binaries\</OutDir>
     <IntDir>..\..\Intermediate\Win64$(Configuration)\</IntDir>
     <TargetName>$(ProjectName)Win64$(Configuration)</TargetName>
-    <IncludePath>..\..\Source\Sandbox;..\..\;..\..\..\..\Engine\Source;..\..\..\..\Engine\Source\Runtime;..\..\..\..\Engine;$(IncludePath)</IncludePath>
+    <IncludePath>..\..\Source\Sandbox;..\..\Source\;..\..\..\..\Engine\Source;..\..\..\..\Engine\Source\Runtime;..\..\..\..\Engine;$(IncludePath)</IncludePath>
     <LibraryPath>..\..\..\..\Engine\Binaries;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development|x64'">
     <OutDir>..\..\Binaries\</OutDir>
     <IntDir>..\..\Intermediate\Win64$(Configuration)\</IntDir>
     <TargetName>$(ProjectName)Win64$(Configuration)</TargetName>
-    <IncludePath>..\..\Source\Sandbox;..\..\;..\..\..\..\Engine\Source;..\..\..\..\Engine\Source\Runtime;..\..\..\..\Engine;$(IncludePath)</IncludePath>
+    <IncludePath>..\..\Source\Sandbox;..\..\Source\;..\..\..\..\Engine\Source;..\..\..\..\Engine\Source\Runtime;..\..\..\..\Engine;$(IncludePath)</IncludePath>
     <LibraryPath>..\..\..\..\Engine\Binaries;$(LibraryPath)</LibraryPath>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
@@ -74,7 +74,7 @@
     <OutDir>..\..\Binaries\</OutDir>
     <IntDir>..\..\Intermediate\Win64$(Configuration)\</IntDir>
     <TargetName>$(ProjectName)Win64$(Configuration)</TargetName>
-    <IncludePath>..\..\Source\Sandbox;..\..\;..\..\..\..\Engine\Source;..\..\..\..\Engine\Source\Runtime;..\..\..\..\Engine;$(IncludePath)</IncludePath>
+    <IncludePath>..\..\Source\Sandbox;..\..\Source\;..\..\..\..\Engine\Source;..\..\..\..\Engine\Source\Runtime;..\..\..\..\Engine;$(IncludePath)</IncludePath>
     <LibraryPath>..\..\..\..\Engine\Binaries;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -120,12 +120,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Config\AppConfig.h" />
-    <ClInclude Include="..\..\Source\Sandbox\ApplicationDelegate\SandboxAppDelegate.h" />
+    <ClCompile Include="..\..\Source\Sandbox\AppDelegate\SandboxAppDelegate.cpp" />
+    <ClCompile Include="..\..\Source\Sandbox\Main\SandboxMain.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Source\Sandbox\ApplicationDelegate\SandboxAppDelegate.cpp" />
-    <ClCompile Include="..\..\Source\Sandbox\Main\SandboxMain.cpp" />
+    <ClInclude Include="..\..\Source\Sandbox\AppDelegate\SandboxAppDelegate.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

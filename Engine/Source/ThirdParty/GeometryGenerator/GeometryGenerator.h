@@ -15,12 +15,12 @@
 #ifndef GEOMETRYGENERATOR_H
 #define GEOMETRYGENERATOR_H
 
+#include "Core/CoreInclude.h"
+
 #include <vector>
 #include <stdint.h>
 #include <algorithm>
 #include <Windows.h>
-
-#include <Includes/MathIncludes.h>
 
 class GeometryGenerator
 {

@@ -1,35 +1,21 @@
-//CoreInclude.h
-//Created 12/01/18
-//Created By Daniel Bowler
-//
-//Core header file that basically everything in the engine
-//and applications will include at the very top.
-// 
-//Note: OS (Windows, etc) and Platform (X64, etc) should
-//be set via Project->Properties
+/**
+ * Common global stuff - Include this in all files. 
+ */
 
 #pragma once
 
-//*********************************************
-//********Global defines & ID's etc************
-//*********************************************
-#include <Core/CoreIdentifiers.h>
+#include <Windows.h>
+#include <crtdbg.h>
 
-//*********************************************
-//***************Core includes*****************
-//*********************************************
-#include <Core/CoreBuildConfiguration.h>
-#include <Core/CoreArchitecture.h>
-#include <Core/CorePlatform.h>
-#include <Core/CoreDefines.h>
-#include <Core/CoreTypes.h>
-#include <Core/CoreMacros.h>
+#include <assert.h>
+#include <stdint.h>
+#include <string> 
 
-//*********************************************
-//**************Engine Configs*****************
-//*********************************************
-#include <Config/EngineConfig.h>
-
-//*********************************************
-//***************Common includes***************
-//*********************************************
+typedef uint8_t uint8;
+typedef uint16_t uint16;
+typedef uint32_t uint32;
+typedef uint64_t uint64;
+typedef int8_t int8;
+typedef int16_t int16;
+typedef int32_t int32;
+typedef int64_t int64;
